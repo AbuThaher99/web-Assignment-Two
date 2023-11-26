@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #bio {
+        width: 300px;
+        height: 150px;
+      }
+    </style>
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>Create A Profile</h1>
+    <form action="CreateProfile.php" method="post" enctype="multipart/form-data" >
+      <fieldset>
+      <br />
+      <label for="photo">Photo:</label>
+      <input type="file" name="photo" id="photo" accept=".png,.gif,.jpeg" />
+      <br />
+      <label for="bio">Bio:</label><br />
+      <textarea name="bio" id="bio" required></textarea>
+      <br />
+      <label for="cv">CV (PDF):</label>
+      <input type="file" name="cv" accept=".pdf" />
+      <br />
+      <label for="experience_area">Area of Experience:</label>
+      <input type="text" name="experience_area" required />
+      <br />
+      <label for="experience_level">Experience Level:</label>
+      <select name="experience_level" required>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+        <option value="expert">Expert</option>
+      </select>
+      <br />
+      <label for="area_of_interest">Area of Interest:</label>
+      <input type="text" name="area_of_interest" required />
+      <br />
+      <input type="submit" name="move" value="Create Profile" />
+    </fieldset>
+    </form>
+  </body>
+</html>

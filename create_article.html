@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #body_text {
+        width: 300px;
+        height: 150px;
+      }
+      #description{
+        width: 300px;
+        height: 150px;
+      }
+    </style>
+    <title>Create Article</title>
+  </head>
+  <body>
+    <h1>Create Article</h1>
+    <form
+      action="create_article.php"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+ <fieldset>
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" required />
+      <br />
+      <label for="description">Description:</label><br />
+      <textarea name="description" id="description" required></textarea>
+      <br />
+      <label for="keywords">Keywords:</label>
+      <input type="text" name="keywords" id="keywords" required />
+      <br />
+      <label for="body_text">Body Text:</label><br />
+      <textarea name="body_text" id="body_text" required></textarea>
+      <br />
+      <label for="photo">Image/Video:</label>
+      <input type="file" name="photo" id="photo " accept="image/*,video/*" />
+      <br />
+      <input type="submit" name="move" value="Create Article" />
+    </fieldset>
+    </form>
+    <a href="view_article.php">View the Article</a>
+  </body>
+</html>

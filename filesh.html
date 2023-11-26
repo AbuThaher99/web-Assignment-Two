@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #description {
+        width: 300px;
+        height: 150px;
+      }
+    </style>
+    <title>File Sharing</title>
+  </head>
+  <body>
+    <h1>File Sharing</h1>
+    <form action="filesharing.php" method="post" enctype="multipart/form-data">
+      <fieldset>
+        <label for="my_image">Select File:</label>
+        <input type="file" name="my_image" id="my_image" required />
+        <br />
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required />
+        <br />
+        <label for="description">Description:</label><br />
+        <textarea name="description" id="description" required></textarea>
+        <br />
+        <label for="keywords">Keywords:</label>
+        <input type="text" name="keywords" id="keywords" required />
+        <br />
+        <input type="submit" name="submit" value="Upload File" />
+      </fieldset>
+    </form>
+    <p><a href="viewFiles.php"> View the Files</a></p>
+  </body>
+</html>
